@@ -1,0 +1,46 @@
+{
+  "answerable": [
+    {
+      "question": "Who trained Lio Arken on Mirehaven?",
+      "expected_facts": [
+        "Eron Kai trained Lio Arken",
+        "Mirehaven"
+      ]
+    },
+    {
+      "question": "What is the Void Core?",
+      "expected_facts": [
+        "Dominion battle station",
+        "planet-destroying weapon"
+      ]
+    },
+    {
+      "question": "Why was Directive Blackglass so effective?",
+      "expected_facts": [
+        "Replica Guard units attacked Warden commanders",
+        "near-simultaneous timing"
+      ]
+    },
+    {
+      "question": "Who are Lio Arken's closest known family members?",
+      "expected_facts": [
+        "Xarn Velgor",
+        "Mira Vey"
+      ]
+    },
+    {
+      "question": "How did the Free Systems Coalition survive the Siege of Nivora?",
+      "expected_facts": [
+        "delayed the assault",
+        "evacuated personnel and equipment"
+      ]
+    }
+  ],
+  "unknown": [
+    "Who founded QuantumForge Software?",
+    "What is the capital of Finland?",
+    "What database does the Astraforge payroll service use?",
+    "Who won the football world championship in 2026?",
+    "What is the population of Kharis in 1420?"
+  ]
+}

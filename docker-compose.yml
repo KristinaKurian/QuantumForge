@@ -1,0 +1,31 @@
+services:
+  faiss-index:
+    build:
+      context: .
+    command: python Task3/build_index.py --index-dir /data/index
+    volumes:
+      - faiss_index:/data/index
+      - hf_cache:/root/.cache/huggingface
+
+  rag-bot:
+    build:
+      context: .
+    depends_on:
+      faiss-index:
+        condition: service_completed_successfully
+    env_file:
+      - .env
+    environment:
+      OLLAMA_BASE_URL: ${OLLAMA_DOCKER_BASE_URL:-http://host.docker.internal:11434}
+    command: uvicorn Task4.app:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - faiss_index:/app/Task3/index
+      - hf_cache:/root/.cache/huggingface
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  faiss_index:
+  hf_cache:

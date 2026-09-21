@@ -1,0 +1,4 @@
+# Minimal dependencies for Task 3
+faiss-cpu
+numpy
+sentence-transformers
