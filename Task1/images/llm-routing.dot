@@ -1,0 +1,16 @@
+digraph G {
+  rankdir=LR;
+  graph [fontname="Arial", bgcolor="white", pad="0.3", nodesep="0.6", ranksep="0.7"];
+  node [shape=box, style="rounded", fontname="Arial", fontsize=12, margin="0.18,0.12"];
+  edge [fontname="Arial", fontsize=10];
+  U [label="User Question"];
+  R [label="Security / Data Policy\nRouter"];
+  C [label="Cloud LLM\n(OpenAI)"];
+  L [label="Local LLM\n(Qwen)"];
+  A [label="Answer"];
+  U -> R;
+  R -> C [label="non-sensitive"];
+  R -> L [label="sensitive"];
+  C -> A;
+  L -> A;
+}

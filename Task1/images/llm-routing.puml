@@ -1,0 +1,21 @@
+@startuml
+skinparam shadowing false
+skinparam roundcorner 12
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor White
+  BorderColor Black
+}
+
+rectangle "User Question" as U
+rectangle "Security / Data Policy Router" as R
+rectangle "Cloud LLM\n(OpenAI)" as C
+rectangle "Local LLM\n(Qwen)" as L
+rectangle "Answer" as A
+
+U --> R
+R --> C : non-sensitive
+R --> L : sensitive
+C --> A
+L --> A
+@enduml
