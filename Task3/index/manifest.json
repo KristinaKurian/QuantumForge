@@ -1,15 +1,15 @@
 {
-  "built_at": "2026-09-21T18:16:40.655453+00:00",
+  "built_at": "2026-09-22T03:12:17.272477+00:00",
   "model_name": "sentence-transformers/multi-qa-mpnet-base-cos-v1",
   "embedding_dimension": 768,
   "index_type": "faiss.IndexFlatIP",
   "similarity": "cosine via normalized inner product",
-  "documents": 38,
-  "chunks": 38,
+  "documents": 39,
+  "chunks": 39,
   "chunk_size_words": 180,
   "chunk_overlap_words": 30,
   "embedding_batch_size": 4,
   "device": "cpu",
   "multiprocessing": false,
-  "duration_seconds": 10.675
+  "duration_seconds": 9.213
 }
