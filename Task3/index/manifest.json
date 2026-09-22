@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-09-22T03:12:17.272477+00:00",
+  "built_at": "2026-09-22T05:54:28.114905+00:00",
   "model_name": "sentence-transformers/multi-qa-mpnet-base-cos-v1",
   "embedding_dimension": 768,
   "index_type": "faiss.IndexFlatIP",
@@ -11,5 +11,5 @@
   "embedding_batch_size": 4,
   "device": "cpu",
   "multiprocessing": false,
-  "duration_seconds": 9.213
+  "duration_seconds": 12.493
 }

@@ -21,13 +21,7 @@ Qwen3-8B через Ollama
 Answer + evidence + sources
 ```
 
-Embedding-модель совпадает с Task 3 и загружается **только из локального Hugging Face cache** (`local_files_only=True`). Task 4 не скачивает её повторно.
-
-Qwen запускается отдельно через Ollama; приложение обращается к `http://127.0.0.1:11434/api/chat`.
-
 ## Запуск
-
-Подготовьте `.env`:
 
 ```bash
 cp .env.example .env
@@ -63,4 +57,4 @@ Swagger: `http://127.0.0.1:8000/docs`.
 
 `RAG_MIN_SCORE` задаёт порог релевантности. Если подходящего контекста нет, LLM не должна придумывать ответ и возвращает `Я не знаю`.
 
-Few-shot примеры встроены в prompt. Набор функциональных тестов находится в `Task4/test_cases.json`.
+Few-shot примеры встроены в prompt.

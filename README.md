@@ -22,7 +22,7 @@
 | API | FastAPI + Uvicorn |
 | Security | pre-prompt, filtering/sanitization, output guard |
 
-## Быстрый запуск
+## Запуск
 
 ```bash
 python -m venv .venv
@@ -56,14 +56,12 @@ Swagger: `http://127.0.0.1:8000/docs`.
 
 ## Task 5
 
-В Task 5 к 38 документам Astraforge добавляется один синтетический malicious-документ, поэтому итоговый индекс содержит 39 документов.
-
 ```bash
 python Task5/verify_malicious_index.py
 python Task5/run_demo.py --mode all
 ```
 
-Подробности защиты и выводы: [Task5/REPORT.md](Task5/REPORT.md).
+Описание: [Task5/REPORT.md](Task5/REPORT.md).
 
 ## Docker
 

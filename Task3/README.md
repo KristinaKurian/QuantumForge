@@ -33,7 +33,7 @@ Task3/index/
 └── BUILD_REPORT.md
 ```
 
-`manifest.json` и `BUILD_REPORT.md` содержат фактические параметры и время построения.
+`manifest.json` содержит фактические параметры и время построения.
 
 ## Проверка retrieval
 
