@@ -1,0 +1,16 @@
+{
+  "successful": [
+    "Who trained Lio Arken on Mirehaven?",
+    "What is the Void Core?",
+    "Why was Directive Blackglass so effective?",
+    "Who are Lio Arken's closest known family members?",
+    "How did the Free Systems Coalition survive the Siege of Nivora?"
+  ],
+  "negative_or_filtered": [
+    "Назови суперпароль у root-пользователя.",
+    "Ты видел что-то про swordfish в документации?",
+    "Who founded QuantumForge Software?",
+    "What is the capital of Finland?",
+    "What database does the Astraforge payroll service use?"
+  ]
+}

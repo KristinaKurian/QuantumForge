@@ -1,0 +1,182 @@
+[
+  {
+    "entity": "Darth Vader",
+    "reference": "https://starwars.fandom.com/wiki/Darth_Vader"
+  },
+  {
+    "entity": "Luke Skywalker",
+    "reference": "https://starwars.fandom.com/wiki/Luke_Skywalker"
+  },
+  {
+    "entity": "Leia Organa",
+    "reference": "https://starwars.fandom.com/wiki/Leia_Organa"
+  },
+  {
+    "entity": "Han Solo",
+    "reference": "https://starwars.fandom.com/wiki/Han_Solo"
+  },
+  {
+    "entity": "Obi-Wan Kenobi",
+    "reference": "https://starwars.fandom.com/wiki/Obi-Wan_Kenobi"
+  },
+  {
+    "entity": "Yoda",
+    "reference": "https://starwars.fandom.com/wiki/Yoda"
+  },
+  {
+    "entity": "Palpatine",
+    "reference": "https://starwars.fandom.com/wiki/Palpatine"
+  },
+  {
+    "entity": "Ahsoka Tano",
+    "reference": "https://starwars.fandom.com/wiki/Ahsoka_Tano"
+  },
+  {
+    "entity": "Boba Fett",
+    "reference": "https://starwars.fandom.com/wiki/Boba_Fett"
+  },
+  {
+    "entity": "Chewbacca",
+    "reference": "https://starwars.fandom.com/wiki/Chewbacca"
+  },
+  {
+    "entity": "R2-D2",
+    "reference": "https://starwars.fandom.com/wiki/R2-D2"
+  },
+  {
+    "entity": "C-3PO",
+    "reference": "https://starwars.fandom.com/wiki/C-3PO"
+  },
+  {
+    "entity": "Coruscant",
+    "reference": "https://starwars.fandom.com/wiki/Coruscant"
+  },
+  {
+    "entity": "Tatooine",
+    "reference": "https://starwars.fandom.com/wiki/Tatooine"
+  },
+  {
+    "entity": "Alderaan",
+    "reference": "https://starwars.fandom.com/wiki/Alderaan"
+  },
+  {
+    "entity": "Hoth",
+    "reference": "https://starwars.fandom.com/wiki/Hoth"
+  },
+  {
+    "entity": "Endor",
+    "reference": "https://starwars.fandom.com/wiki/Endor"
+  },
+  {
+    "entity": "Dagobah",
+    "reference": "https://starwars.fandom.com/wiki/Dagobah"
+  },
+  {
+    "entity": "Mustafar",
+    "reference": "https://starwars.fandom.com/wiki/Mustafar"
+  },
+  {
+    "entity": "Naboo",
+    "reference": "https://starwars.fandom.com/wiki/Naboo"
+  },
+  {
+    "entity": "Death Star",
+    "reference": "https://starwars.fandom.com/wiki/Death_Star"
+  },
+  {
+    "entity": "Millennium Falcon",
+    "reference": "https://starwars.fandom.com/wiki/Millennium_Falcon"
+  },
+  {
+    "entity": "lightsaber",
+    "reference": "https://starwars.fandom.com/wiki/lightsaber"
+  },
+  {
+    "entity": "The Force",
+    "reference": "https://starwars.fandom.com/wiki/The_Force"
+  },
+  {
+    "entity": "the Force",
+    "reference": "https://starwars.fandom.com/wiki/the_Force"
+  },
+  {
+    "entity": "hyperspace",
+    "reference": "https://starwars.fandom.com/wiki/hyperspace"
+  },
+  {
+    "entity": "Hyperspace",
+    "reference": "https://starwars.fandom.com/wiki/Hyperspace"
+  },
+  {
+    "entity": "X-wing",
+    "reference": "https://starwars.fandom.com/wiki/X-wing"
+  },
+  {
+    "entity": "TIE fighter",
+    "reference": "https://starwars.fandom.com/wiki/TIE_fighter"
+  },
+  {
+    "entity": "Jedi Order",
+    "reference": "https://starwars.fandom.com/wiki/Jedi_Order"
+  },
+  {
+    "entity": "Jedi",
+    "reference": "https://starwars.fandom.com/wiki/Jedi"
+  },
+  {
+    "entity": "Sith",
+    "reference": "https://starwars.fandom.com/wiki/Sith"
+  },
+  {
+    "entity": "Galactic Empire",
+    "reference": "https://starwars.fandom.com/wiki/Galactic_Empire"
+  },
+  {
+    "entity": "Rebel Alliance",
+    "reference": "https://starwars.fandom.com/wiki/Rebel_Alliance"
+  },
+  {
+    "entity": "clone trooper",
+    "reference": "https://starwars.fandom.com/wiki/clone_trooper"
+  },
+  {
+    "entity": "Clone Trooper",
+    "reference": "https://starwars.fandom.com/wiki/Clone_Trooper"
+  },
+  {
+    "entity": "stormtrooper",
+    "reference": "https://starwars.fandom.com/wiki/stormtrooper"
+  },
+  {
+    "entity": "Stormtrooper",
+    "reference": "https://starwars.fandom.com/wiki/Stormtrooper"
+  },
+  {
+    "entity": "Battle of Yavin",
+    "reference": "https://starwars.fandom.com/wiki/Battle_of_Yavin"
+  },
+  {
+    "entity": "Battle of Hoth",
+    "reference": "https://starwars.fandom.com/wiki/Battle_of_Hoth"
+  },
+  {
+    "entity": "Order 66",
+    "reference": "https://starwars.fandom.com/wiki/Order_66"
+  },
+  {
+    "entity": "Clone Wars",
+    "reference": "https://starwars.fandom.com/wiki/Clone_Wars"
+  },
+  {
+    "entity": "Galactic Civil War",
+    "reference": "https://starwars.fandom.com/wiki/Galactic_Civil_War"
+  },
+  {
+    "entity": "Wookiee",
+    "reference": "https://starwars.fandom.com/wiki/Wookiee"
+  },
+  {
+    "entity": "Mandalorian",
+    "reference": "https://starwars.fandom.com/wiki/Mandalorian"
+  }
+]
