@@ -2,7 +2,7 @@ services:
   faiss-index:
     build:
       context: .
-    command: python Task3/build_index.py --index-dir /data/index
+    command: python Task3/build_index.py --index-dir /data/index --force
     volumes:
       - faiss_index:/data/index
       - hf_cache:/root/.cache/huggingface

@@ -7,101 +7,60 @@ Question
    ↓
 Sentence-Transformers
    ↓
-FAISS search (Top-K)
+FAISS Top-K
    ↓
 Relevance threshold
-   ├── low score ──→ "Я не знаю"
+   ├── недостаточно данных → "Я не знаю"
    ↓
 Retrieved context
    ↓
-Few-shot examples + system prompt
+Few-shot + system prompt
    ↓
-LLM (Ollama or OpenAI)
+Qwen3-8B через Ollama
    ↓
 Answer + evidence + sources
 ```
 
-## Few-shot
+Embedding-модель совпадает с Task 3 и загружается **только из локального Hugging Face cache** (`local_files_only=True`). Task 4 не скачивает её повторно.
 
-В prompt добавлены два примера из Astraforge:
-
-- `What is the Void Core?`
-- `Who trains Lio Arken on Mirehaven?`
-
-Они используют факты, которые реально присутствуют в `knowledge_base`.
-
-## CoT / объяснение
-
-Модель получает инструкцию сначала проанализировать контекст, но не раскрывать скрытую внутреннюю цепочку рассуждений. Вместо raw Chain-of-Thought ответ содержит **короткое проверяемое Evidence summary**:
-
-```text
-Answer: ...
-Evidence:
-1. Факт из найденного документа.
-2. Второй факт, если он нужен.
-Sources: ...
-```
-
-Так сохраняется требование задания об объяснимости, но пользователю показываются только проверяемые шаги, основанные на источниках.
+Qwen запускается отдельно через Ollama; приложение обращается к `http://127.0.0.1:11434/api/chat`.
 
 ## Запуск
 
-Сначала построить индекс:
+Подготовьте `.env`:
 
 ```bash
-python Task3/build_index.py
+cp .env.example .env
 ```
 
-### Вариант 1 — локальная LLM через Ollama
+Проверьте Ollama:
 
 ```bash
 ollama pull qwen3:8b
-ollama serve
-
-export LLM_PROVIDER=ollama
-export OLLAMA_MODEL=qwen3:8b
-export OLLAMA_BASE_URL=http://localhost:11434
-
-uvicorn Task4.app:app --reload
+curl http://127.0.0.1:11434/api/tags
 ```
 
-### Вариант 2 — OpenAI
+Запустите API без `--reload`:
 
 ```bash
-export LLM_PROVIDER=openai
-export OPENAI_API_KEY=...
-export OPENAI_MODEL=gpt-5.6-luna
-
-uvicorn Task4.app:app --reload
+python -m uvicorn Task4.app:app \
+  --host 127.0.0.1 \
+  --port 8000 \
+  --env-file .env
 ```
 
-## Проверка
+Swagger: `http://127.0.0.1:8000/docs`.
 
-```bash
-curl http://localhost:8000/health
-```
+## Endpoints
 
-```bash
-curl -X POST http://localhost:8000/ask \
-  -H "Content-Type: application/json" \
-  -d '{"question":"Who trained Lio Arken on Mirehaven?"}'
-```
+| Endpoint | Назначение |
+|---|---|
+| `GET /health` | состояние сервиса |
+| `POST /ask` | полный RAG-запрос |
+| `GET /search` | диагностика retrieval |
 
-Для диагностики retrieval:
+## Поведение
 
-```bash
-curl "http://localhost:8000/search?q=What%20is%20the%20Void%20Core"
-```
+`RAG_MIN_SCORE` задаёт порог релевантности. Если подходящего контекста нет, LLM не должна придумывать ответ и возвращает `Я не знаю`.
 
-## «Я не знаю»
-
-По умолчанию:
-
-```text
-RAG_TOP_K=4
-RAG_MIN_SCORE=0.42
-```
-
-`RAG_MIN_SCORE` нужно откалибровать после реального запуска по `Task4/test_cases.json`. Если нерелевантные вопросы получают слишком высокий score — порог повышается. Если валидные вопросы отклоняются — понижается.
-
-В `examples.md` подготовлены 5 answerable и 5 out-of-domain вопросов для требуемых скриншотов.
+Few-shot примеры встроены в prompt. Набор функциональных тестов находится в `Task4/test_cases.json`.
